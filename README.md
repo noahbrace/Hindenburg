@@ -28,6 +28,11 @@ docker build .
 docker run --rm -p 8090:8090 Hindenburg-master
 ```
 
+Alternatively, you can pull this prebuilt image:
+```
+docker pull dylanmei/zeppelin
+docker run --rm -p 8090:8090 dylanmei/zeppelin
+```
 Zeppelin will be running at `http://localhost:8090`.
 
 ______________________________________________________________________________________________________________________________
