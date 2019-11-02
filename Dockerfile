@@ -26,7 +26,7 @@ RUN set -ex \
  && rm -rf /var/lib/apt/lists/*
 
 # Zeppelin
-ENV ZEPPELIN_PORT 8080
+ENV ZEPPELIN_PORT 8090
 ENV ZEPPELIN_HOME /usr/zeppelin
 ENV ZEPPELIN_CONF_DIR $ZEPPELIN_HOME/conf
 ENV ZEPPELIN_NOTEBOOK_DIR $ZEPPELIN_HOME/notebook
