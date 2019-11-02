@@ -26,10 +26,10 @@ To start Zeppelin pull the `latest` image and run the container:
 
 ```
 docker pull dylanmei/zeppelin
-docker run --rm -p 8080:8080 dylanmei/zeppelin
+docker run --rm -p 8090:8090 dylanmei/zeppelin
 ```
 
-Zeppelin will be running at `http://${YOUR_DOCKER_HOST}:8080`.
+Zeppelin will be running at `http://${YOUR_DOCKER_HOST}:8090`.
 
 
 
