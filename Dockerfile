@@ -16,6 +16,7 @@ RUN set -ex \
     libopenblas-dev \
  && packages=' \
     numpy \
+    pandasql \
     scipy \
  ' \
  && pip3 install $packages \
@@ -25,7 +26,7 @@ RUN set -ex \
  && rm -rf /var/lib/apt/lists/*
 
 # Zeppelin
-ENV ZEPPELIN_PORT 8090
+ENV ZEPPELIN_PORT 8080
 ENV ZEPPELIN_HOME /usr/zeppelin
 ENV ZEPPELIN_CONF_DIR $ZEPPELIN_HOME/conf
 ENV ZEPPELIN_NOTEBOOK_DIR $ZEPPELIN_HOME/notebook
@@ -52,12 +53,16 @@ RUN set -ex \
  && mkdir -p $ZEPPELIN_HOME/logs \
  && mkdir -p $ZEPPELIN_HOME/run \
  && apt-get purge -y --auto-remove $buildDeps \
-
+ && rm -rf /var/lib/apt/lists/* \
+ && rm -rf /usr/src/zeppelin \
+ && rm -rf /root/.m2 \
+ && rm -rf /root/.npm \
+ && rm -rf /root/.cache/bower \
+ && rm -rf /tmp/*
 
 RUN ln -s /usr/bin/pip3 /usr/bin/pip \
  && ln -s /usr/bin/python3 /usr/bin/python
 
 ADD about.json $ZEPPELIN_NOTEBOOK_DIR/2BTRWA9EV/note.json
-
 WORKDIR $ZEPPELIN_HOME
 CMD ["bin/zeppelin.sh"]
