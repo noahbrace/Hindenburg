@@ -13,8 +13,6 @@ This image is large and unapologetically opinionated. It contains:
   - spark
   - shell
   - angular
-  - markdown
-  - postgresql
   - jdbc
   - python
   - hbase
@@ -22,14 +20,15 @@ This image is large and unapologetically opinionated. It contains:
 
 ## simple usage
 
-To start Zeppelin pull the `latest` image and run the container:
+To start Zeppelin download this, and then Unzip it into its own folder.
+Then once you have done that,navigate to that folder in Terminal and then type
 
 ```
-docker pull dylanmei/zeppelin
-docker run --rm -p 8090:8090 dylanmei/zeppelin
+docker build .
+docker run --rm -p 8090:8090 Hindenburg-master
 ```
 
-Zeppelin will be running at `http://${YOUR_DOCKER_HOST}:8090`.
+Zeppelin will be running at `http://localhost:8090`.
 
 
 
