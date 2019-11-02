@@ -30,5 +30,7 @@ docker run --rm -p 8090:8090 Hindenburg-master
 
 Zeppelin will be running at `http://localhost:8090`.
 
+______________________________________________________________________________________________________________________________
 
+The Folder ZeppelinNotebooks has all sorts of different sample notebooks for interactive tutorials. I still need to label them all. 
 
