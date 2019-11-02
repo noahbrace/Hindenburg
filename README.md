@@ -1,4 +1,6 @@
-# zeppelin
+# Hindenburg 
+
+aka A Zeppelin with a little Spark
 
 A `debian:jessie` based Spark and [Zeppelin](http://zeppelin.apache.org) Docker container.
 
